@@ -14,12 +14,13 @@ describe('cadastro', function () {
             postcode: '32003',
             other: 'Now Im living in Brazil',
             phone: '12391234567',
-            email: 'cintiasa@samuraibs.com'
+            email: 'cintiasa1@samuraibs.com'
         }
 
         it('deve cadastrar com sucesso', function () {
             signupPage.go()
             signupPage.insert(user)
+            signupPage.create()
             signupPage.form(user)
             signupPage.submit()
 
@@ -36,6 +37,7 @@ describe('cadastro', function () {
         it('deve exibir email já cadastrado', function () {
             signupPage.go()
             signupPage.insert(user)
+            signupPage.create()
             signupPage.alert.shouldHaveText('An account using this email address has already been registered. Please enter a valid password or request a new one.')
 
         })
@@ -51,6 +53,7 @@ describe('cadastro', function () {
         it('deve exibir mensagem de alerta', function () {
             signupPage.go()
             signupPage.insert(user)
+            signupPage.create()
             signupPage.alert.shouldHaveText('Invalid email address.')
         })
     })
@@ -81,6 +84,7 @@ describe('cadastro', function () {
                 }
 
                 signupPage.insert(user)
+                signupPage.create()
                 signupPage.form(user)
                 signupPage.submit()
             })
@@ -96,12 +100,12 @@ describe('cadastro', function () {
         
         it('deve exibir mensagem de alerta', function(){
             signupPage.go()
-            signupPage.submit1()
+            signupPage.create()
             signupPage.alert.shouldHaveText('Invalid email address.')
         })                  
     })
 
-    context.only('quando não preencho nenhum dos campos', function(){
+    context('quando não preencho nenhum dos campos', function(){
         
         const user = {
             email: 'cintias1a@samuraibs.com'
@@ -120,8 +124,8 @@ describe('cadastro', function () {
         before(function(){
             signupPage.go()
             signupPage.insert(user)
-            signupPage.submit1()
-            signupPage.submit2()
+            signupPage.create()
+            signupPage.submit()
         })
 
         alertMessages.forEach(function(alert){
