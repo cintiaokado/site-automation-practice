@@ -1,0 +1,22 @@
+{
+  "name": "automation-practice",
+  "version": "1.0.0",
+  "description": "Treino para aprender a como automatizar site experimental ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "nodes",
+    "automation-practice"
+  ],
+  "author": "Cintia Okado",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^9.7.0",
+    "pg": "^8.8.0"
+  }
+}

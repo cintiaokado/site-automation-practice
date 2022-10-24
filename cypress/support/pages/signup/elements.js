@@ -1,0 +1,15 @@
+exports.el = {
+     email: 'input[name="email_create"]',
+     submitCreate: 'button[name="SubmitCreate"]',
+     name:'input[name=customer_firstname]',
+     lastname:'input[name=customer_lastname]',
+     password:'input[name="passwd"]',
+     company:'input[name=company]',
+     address1:'input[name=address1]',
+     address2:'input[name=address2]',
+     city:'input[name=city]',
+     postcode:'input[name=postcode]',
+     other:'[name=other]',
+     phone:'input[name=phone]',
+     submitAccount: 'button[name="submitAccount"]',
+}
