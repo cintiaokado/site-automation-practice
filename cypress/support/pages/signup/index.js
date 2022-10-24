@@ -16,7 +16,7 @@ class SignupPage {
         cy.get(el.email).type(user.email)
     }
     
-    submit1(){
+    create(){
         cy.get(el.submitCreate).click()
         cy.wait(3000)
     }
@@ -65,7 +65,7 @@ class SignupPage {
 
     }
 
-    submit2() {
+    submit() {
         cy.get(el.submitAccount).click()
     }
 
